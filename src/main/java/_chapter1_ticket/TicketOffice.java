@@ -13,12 +13,15 @@ public class TicketOffice {
         this.tickets.addAll(Arrays.asList(tickets));
     }
 
-    // 티켓을 판매한다.
-    public Ticket getTicket() {
+    public void sellTicketTo(Audience audience) {
+        plusAmount(audience.buy(getTicket()));
+    }
+
+    private Ticket getTicket() {
         return tickets.removeFirst();
     }
 
-    public void plusAmount(long amount) {
+    private void plusAmount(long amount) {
         this.amount += amount;
     }
 
