@@ -8,7 +8,7 @@ public class SequenceCondition implements DiscountCondition {
     }
 
     @Override
-    public boolean isSatisfied(Screening screening) {
+    public boolean isSatisfiedBy(Screening screening) {
         return screening.isSequence(sequence);
     }
 }
