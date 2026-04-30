@@ -1,6 +1,6 @@
 package _chapter5_movie_reservation;
 
-public class SequenceCondition {
+public class SequenceCondition implements DiscountCondition {
     private int sequence;
 
     public SequenceCondition(int sequence) {
