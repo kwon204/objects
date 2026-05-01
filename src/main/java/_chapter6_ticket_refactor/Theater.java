@@ -8,6 +8,6 @@ public class Theater {
     }
 
     public void enter(Audience audience) {
-        this.ticketSeller.setTicket(audience);
+        this.ticketSeller.sellTo(audience);
     }
 }

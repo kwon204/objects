@@ -7,7 +7,7 @@ public class TicketSeller {
         this.ticketOffice = ticketOffice;
     }
 
-    public void setTicket(Audience audience) {
-        this.ticketOffice.minusAmount(audience.setTicket(this.ticketOffice.getTicket()));
+    public void sellTo(Audience audience) {
+        this.ticketOffice.minusAmount(audience.buy(this.ticketOffice.getTicket()));
     }
 }
