@@ -8,14 +8,6 @@ public class TicketSeller {
     }
 
     public void setTicket(Audience audience) {
-        if (audience.getBag().hasInvitation()) {
-            Ticket ticket = this.ticketOffice.getTicket();
-            audience.getBag().setTicket(ticket);
-        } else {
-            Ticket ticket = this.ticketOffice.getTicket();
-            audience.getBag().minusAmount(ticket.getFee());
-            this.ticketOffice.plusAmount(ticket.getFee());
-            audience.getBag().setTicket(ticket);
-        }
+        this.ticketOffice.minusAmount(audience.setTicket(this.ticketOffice.getTicket()));
     }
 }
